@@ -243,7 +243,7 @@ public class KonfirmasiHilang extends javax.swing.JFrame {
                    + "petugaskonfirkembali='" + "Admin" + "',"
                    + "status = '4', keterangan = 'Hilang' WHERE peminjam.id = "+ id +  "" );
             Datas("");
-            JOptionPane.showMessageDialog(null, "berhasil Dikonfirmasi");
+            JOptionPane.showMessageDialog(null, "Berhasil Dikonfirmasi");
             tanggalkembali.setText("");
 
         }catch(Exception e){

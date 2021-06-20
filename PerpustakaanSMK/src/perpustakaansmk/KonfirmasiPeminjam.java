@@ -238,7 +238,7 @@ public class KonfirmasiPeminjam extends javax.swing.JFrame {
                    + "status = '2', keterangan = 'Proses' WHERE peminjam.id = "+ id +  "" );
             Datas("");
             
-            JOptionPane.showMessageDialog(null, "berhasil Dikonfirmasi");
+            JOptionPane.showMessageDialog(null, "Berhasil Dikonfirmasi");
             tkembali.setText("");
             pustakawan.setText("");
             jButton1.setEnabled(false);

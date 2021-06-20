@@ -88,7 +88,6 @@ public class KonfirmasiPengembalian extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelkembali = new javax.swing.JTable();
         jTextField1 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         tanggalkembali = new javax.swing.JTextField();
@@ -96,6 +95,7 @@ public class KonfirmasiPengembalian extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         dendaa1 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Konfirmasi Pengembalian");
@@ -147,8 +147,6 @@ public class KonfirmasiPengembalian extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Cari");
-
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("NAMA PUSTAKAWAN");
 
@@ -181,6 +179,9 @@ public class KonfirmasiPengembalian extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel4.setText("Cari :");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -198,15 +199,15 @@ public class KonfirmasiPengembalian extends javax.swing.JFrame {
                         .addComponent(jButton6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton1))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jButton3))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel4)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jTextField1))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel6)
@@ -219,8 +220,8 @@ public class KonfirmasiPengembalian extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(tanggalkembali, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGap(6, 6, 6))))
+                                        .addComponent(tanggalkembali, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(6, 6, 6)))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -233,8 +234,8 @@ public class KonfirmasiPengembalian extends javax.swing.JFrame {
                         .addComponent(jLabel2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(pustakawan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -246,10 +247,10 @@ public class KonfirmasiPengembalian extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(dendaa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
+                .addGap(51, 51, 51)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3))
+                    .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -312,10 +313,10 @@ public class KonfirmasiPengembalian extends javax.swing.JFrame {
             stt = CC.createStatement();
             stt.executeUpdate("UPDATE buku Set sisabuku= sisabuku+1 Where buku.idbuku = "+idbuku);
             stt = CC.createStatement();
-            stt.executeUpdate("UPDATE peminjam set "
-                   + "tanggalkembali='" + tanggalkembali.getText() + "',"
-                   + "petugaskonfirkembali='" + pustakawan.getText() + "',"
-                   + "status = '4' WHERE peminjam.id = "+ id +  "" );
+            String tanggal = tanggalkembali.getText();
+            String Petugas = pustakawan.getText();
+            //String Update = "UPDATE peminjam SET `tanggalkembali` = '"+tanggal+"' ,`petugaskonfirkembali` = '"+Petugas+"' ,`status` = '4' ,`keterangan`= `Kembali` WHERE `id` = '"+id+"'";
+            stt.executeUpdate("UPDATE peminjam SET `tanggalkembali` = '"+tanggal+"' ,`petugaskonfirkembali` = '"+Petugas+"' ,`status` = '4' ,`keterangan`= 'Kembali' WHERE `id` = " + id);
             Datas("");
             JOptionPane.showMessageDialog(null, "berhasil Dikonfirmasi");
             tanggalkembali.setText("");
@@ -350,12 +351,11 @@ public class KonfirmasiPengembalian extends javax.swing.JFrame {
             stt = CC.createStatement();
             stt.executeUpdate("UPDATE buku Set sisabuku= sisabuku+1 Where buku.idbuku = "+idbuku);
             stt = CC.createStatement();
-            stt.executeUpdate("UPDATE peminjam set "
-                   + "tanggalkembali='" + tanggalkembali.getText() + "',"
-                   + "petugaskonfirkembali='" + pustakawan.getText() + "',"
-                   + "status = '4' WHERE peminjam.id = "+ id +  "" );
+            String tanggal = tanggalkembali.getText();
+            String Petugas = pustakawan.getText();
+            stt.executeUpdate("UPDATE peminjam SET `tanggalkembali` = '"+tanggal+"' ,`petugaskonfirkembali` = '"+Petugas+"' ,`status` = '4' ,`keterangan`= 'Kembali' WHERE `id` = " + id);
             Datas("");
-            JOptionPane.showMessageDialog(null, "berhasil Dikonfirmasi");
+            JOptionPane.showMessageDialog(null, "Berhasil Dikonfirmasi");
             
             tanggalkembali.setText("");
             pustakawan.setText("");
@@ -420,11 +420,11 @@ public class KonfirmasiPengembalian extends javax.swing.JFrame {
     private javax.swing.JTextField dendaa1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;

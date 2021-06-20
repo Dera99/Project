@@ -37,13 +37,12 @@ public class Siswa_menu extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jMenuBar2 = new javax.swing.JMenuBar();
-        jMenu3 = new javax.swing.JMenu();
-        jRadioButtonMenuItem2 = new javax.swing.JRadioButtonMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jRadioButtonMenuItem4 = new javax.swing.JRadioButtonMenuItem();
         jRadioButtonMenuItem5 = new javax.swing.JRadioButtonMenuItem();
+        jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Siswa");
@@ -139,19 +138,6 @@ public class Siswa_menu extends javax.swing.JFrame {
 
         jMenuBar2.setBackground(new java.awt.Color(199, 234, 238));
 
-        jMenu3.setText("File");
-
-        jRadioButtonMenuItem2.setSelected(true);
-        jRadioButtonMenuItem2.setText("kembali ");
-        jRadioButtonMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonMenuItem2ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jRadioButtonMenuItem2);
-
-        jMenuBar2.add(jMenu3);
-
         jMenu4.setText("Anggota");
 
         jRadioButtonMenuItem1.setSelected(true);
@@ -186,6 +172,19 @@ public class Siswa_menu extends javax.swing.JFrame {
         jMenu5.add(jRadioButtonMenuItem5);
 
         jMenuBar2.add(jMenu5);
+
+        jMenu3.setText("Kembali");
+        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu3MouseClicked(evt);
+            }
+        });
+        jMenu3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu3ActionPerformed(evt);
+            }
+        });
+        jMenuBar2.add(jMenu3);
 
         setJMenuBar(jMenuBar2);
 
@@ -240,17 +239,23 @@ public class Siswa_menu extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jRadioButtonMenuItem1ActionPerformed
 
-    private void jRadioButtonMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMenuItem2ActionPerformed
-        Main a = new Main();
-        a.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jRadioButtonMenuItem2ActionPerformed
-
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         BayarDenda a = new BayarDenda();
         a.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jMenu3ActionPerformed
+
+    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
+        // TODO add your handling code here:
+        Main a = new Main();
+        a.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jMenu3MouseClicked
 
     /**
      * @param args the command line arguments
@@ -303,7 +308,6 @@ public class Siswa_menu extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
-    private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem2;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem4;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem5;
     // End of variables declaration//GEN-END:variables

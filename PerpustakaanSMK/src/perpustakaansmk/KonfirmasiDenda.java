@@ -214,7 +214,7 @@ public class KonfirmasiDenda extends javax.swing.JFrame {
             Datas("");
             stt = CC.createStatement();
             stt.executeUpdate("UPDATE kasdenda Set jumlah = jumlah+"+jml+" Where kasdenda.id= 1 ");
-            JOptionPane.showMessageDialog(null, "berhasil Dikonfirmasi");
+            JOptionPane.showMessageDialog(null, "Berhasil Dikonfirmasi");
             pustakawan.setText("");
 
             jButton1.setEnabled(false);
