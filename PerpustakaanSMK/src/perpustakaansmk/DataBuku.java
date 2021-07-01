@@ -345,6 +345,16 @@ public class DataBuku extends javax.swing.JFrame {
 
     private void hapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusActionPerformed
         // TODO add your handling code here:
+        try{
+            stt = CC.createStatement();
+            stt.executeUpdate("DELETE FROM buku WHERE buku.idbuku = '"+ id +"'");
+            Datas("");
+            JOptionPane.showMessageDialog(null, "Data Berhasil Di Hapus");
+            update.setEnabled(false);
+            hapus.setEnabled(false);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_hapusActionPerformed
 
     private void tabeldatabukuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabeldatabukuMouseClicked

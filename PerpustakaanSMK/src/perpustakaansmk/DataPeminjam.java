@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package perpustakaansmk;
+import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -122,6 +123,14 @@ public class DataPeminjam extends javax.swing.JFrame {
 
         jToggleButton1.setBackground(new java.awt.Color(199, 234, 238));
         jToggleButton1.setText("Selesai");
+        jToggleButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jToggleButton1MouseClicked(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jToggleButton1MouseReleased(evt);
+            }
+        });
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
@@ -215,15 +224,15 @@ public class DataPeminjam extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        Datas("4");
+       Datas("4");
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jToggleButton1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jToggleButton1KeyReleased
-       Datas("2");
+       //Datas("2");
     }//GEN-LAST:event_jToggleButton1KeyReleased
 
     private void jToggleButton1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jToggleButton1KeyPressed
-        Datas("4");
+        //Datas("4");
     }//GEN-LAST:event_jToggleButton1KeyPressed
 
     private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
@@ -234,6 +243,15 @@ public class DataPeminjam extends javax.swing.JFrame {
         peminjam.setRowSorter(tr);
         tr.setRowFilter(RowFilter.regexFilter(Search));
     }//GEN-LAST:event_jTextField1KeyReleased
+
+    private void jToggleButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jToggleButton1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButton1MouseClicked
+
+    private void jToggleButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jToggleButton1MouseReleased
+        // TODO add your handling code here:
+        //Datas("2");
+    }//GEN-LAST:event_jToggleButton1MouseReleased
 
     /**
      * @param args the command line arguments

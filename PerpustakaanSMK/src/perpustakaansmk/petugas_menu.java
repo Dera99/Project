@@ -286,6 +286,11 @@ public class petugas_menu extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu4.setText("Transaksi");
+        jMenu4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu4ActionPerformed(evt);
+            }
+        });
 
         LBukuHilang.setSelected(true);
         LBukuHilang.setText("Laporan Buku Hilang");
@@ -391,20 +396,6 @@ public class petugas_menu extends javax.swing.JFrame {
 
     private void LaporanAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LaporanAnggotaActionPerformed
         // TODO add your handling code here:
-//        String reportSource = null;
-//        String reportDest = null;
-//        
-//        try{
-//            reportSource = System.getProperty("user.dir") + "/src/Laporan/LaporanAnggota.jrxml";
-//            reportSource = System.getProperty("user.dir") + "/src/Laporan/LaporanAnggota.jasper";
-//            
-//            JasperReport jas = JasperCompileManager.compileReport(reportSource);
-//            JasperPrint jap = JasperFillManager.fillReport(jas, null , CC);
-//            JasperExportManager.exportReportToHtmlFile(jap, reportDest);
-//            JasperViewer.viewReport(jap, false);
-//        }catch(Exception ex){
-//            System.out.println(ex);
-//        }
          try{
             String file =  "src/Laporan/LaporanAnggota.jasper";
             JasperPrint jp = JasperFillManager.fillReport(file, null, CC);
@@ -535,6 +526,10 @@ public class petugas_menu extends javax.swing.JFrame {
         a.setVisible(true);
         dispose();
     }//GEN-LAST:event_panelAdminActionPerformed
+
+    private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu4ActionPerformed
 
     /**
      * @param args the command line arguments

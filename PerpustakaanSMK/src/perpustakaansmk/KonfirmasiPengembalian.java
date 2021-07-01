@@ -315,7 +315,6 @@ public class KonfirmasiPengembalian extends javax.swing.JFrame {
             stt = CC.createStatement();
             String tanggal = tanggalkembali.getText();
             String Petugas = pustakawan.getText();
-            //String Update = "UPDATE peminjam SET `tanggalkembali` = '"+tanggal+"' ,`petugaskonfirkembali` = '"+Petugas+"' ,`status` = '4' ,`keterangan`= `Kembali` WHERE `id` = '"+id+"'";
             stt.executeUpdate("UPDATE peminjam SET `tanggalkembali` = '"+tanggal+"' ,`petugaskonfirkembali` = '"+Petugas+"' ,`status` = '4' ,`keterangan`= 'Kembali' WHERE `id` = " + id);
             Datas("");
             JOptionPane.showMessageDialog(null, "berhasil Dikonfirmasi");

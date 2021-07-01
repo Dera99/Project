@@ -191,7 +191,7 @@ public class RestokBuku extends javax.swing.JFrame {
             stt = CC.createStatement();
             stt.executeUpdate("UPDATE hilang Set jumlahhilang= jumlahhilang-"+ jum.getText() +" Where hilang.idbuku = "+idbuku);
             stt = CC.createStatement();
-            stt.executeUpdate("UPDATE kasdenda Set jumlah = jumlah-40000 Where kasdenda.id= 1 ");
+            stt.executeUpdate("UPDATE kasdenda Set jumlah = jumlah - (40000*'"+jum.getText()+"') Where kasdenda.id= 1 ");
             Datas("");
             JOptionPane.showMessageDialog(null, "Berhasil");
         }catch(Exception e){

@@ -28,6 +28,22 @@ public class DataBukuHilang extends javax.swing.JFrame {
         initComponents();
         judul();
         Datas("");
+        userLogin();
+        hakakses();
+    }
+    
+    private void userLogin(){
+        UserSession.getUserLogin();
+    }
+    private void hakakses() {
+    String user=UserSession.getUserLogin();
+        if(user.equals("Admin") || user.equals("admin")){
+       //Master
+            restok.setEnabled(true);
+        }
+        else {
+            restok.setEnabled(false);
+        }
     }
     public void judul() {
             Object[] judul = {
@@ -73,7 +89,7 @@ public class DataBukuHilang extends javax.swing.JFrame {
         hilang = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        restok = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Data Buku Yang Hilang");
@@ -104,7 +120,12 @@ public class DataBukuHilang extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("ReStocjk");
+        restok.setText("ReStocjk");
+        restok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                restokActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -117,7 +138,7 @@ public class DataBukuHilang extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2)))
+                        .addComponent(restok)))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(319, 319, 319)
@@ -136,7 +157,7 @@ public class DataBukuHilang extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(restok))
                 .addContainerGap())
         );
 
@@ -160,6 +181,15 @@ public class DataBukuHilang extends javax.swing.JFrame {
         a.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void restokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restokActionPerformed
+        // TODO add your handling code here:
+        hakakses();
+        RestokBuku a = new RestokBuku();
+        a.setVisible(true);
+        dispose();
+        
+    }//GEN-LAST:event_restokActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,9 +229,9 @@ public class DataBukuHilang extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable hilang;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton restok;
     // End of variables declaration//GEN-END:variables
 }
